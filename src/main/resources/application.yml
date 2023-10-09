@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    url:
+      username:
+      password:
+      driver-class-name:
+
+  jpa:
+    hibernate:
+      ddl-auto:
+    properties:
+      hibernate:
+        format_sql:
+
+  logging.level:
+    org.hibernate.SQL:
