@@ -17,7 +17,7 @@ public class ReviewController {
 
     @ResponseStatus(HttpStatus.OK)
         @PostMapping("/review")//리뷰등록
-        public List<Review> addReview(@ModelAttribute Review review) {//Model model생략가능 자동으로 넣어주기때문
+        public List<Review> addReview(@RequestBody Review review) {//Model model생략가능 자동으로 넣어주기때문
         reviewService.saveReview(review);
         List<Review> all = reviewService.findAll();
         return all;
@@ -33,7 +33,7 @@ public class ReviewController {
 
     @ResponseStatus(HttpStatus.OK)
     @DeleteMapping("/reivew") // 리뷰 삭제
-    public List<Review> deleteReview(@ModelAttribute Review review) {
+    public List<Review> deleteReview(@RequestBody Review review) {
         reviewService.deleteReview(review);
         List<Review> all = reviewService.findAll();
 

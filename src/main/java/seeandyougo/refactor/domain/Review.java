@@ -30,7 +30,7 @@ public class Review {
     private String imgLink;
 
     private Double reviewRate;
-
 }
+
 
 
